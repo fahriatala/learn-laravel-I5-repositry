@@ -7,28 +7,21 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Signature.
+ * Class Post.
  *
  * @package namespace App\Entities;
  */
-class Signature extends Model implements Transformable
+class Post extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $table = 'signatures';
+    protected $table = 'posts';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    #protected $primaryKey = 'id';
-
-    protected $fillable = ['name','email','body'];
-
-    public function posts()
-    {
-        return $this->hasMany(Post::class, 'signature_id', 'id');
-    }
+    protected $fillable = ['signature_id','name'];
 
 }

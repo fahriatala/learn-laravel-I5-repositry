@@ -39,9 +39,9 @@ class SignaturesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $this->repository;
+        // $this->repository->where('id','!=',23);
         //$signatures = $this->repository->getByCriteria(new SignaturesCriteria());
         $signatures = $this->repository->paginate($limit = null, $columns = ['*']);
         

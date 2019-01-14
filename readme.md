@@ -8,4 +8,3 @@ Learn How To Use I5 Reository To Make Laravel API
 5. php artisan migrate
 6. php artisan tinker
 7. type on your terminal: factory(App\Entities\Signature::class, 20)->create();
-

@@ -50,8 +50,8 @@ class SignatureRepositoryEloquent extends BaseRepository implements SignatureRep
      */
     public function boot()
     {
-        $this->pushCriteria(app(RequestCriteria::class));
-        #$this->pushCriteria(SignaturesCriteria::class);
+        #$this->pushCriteria(app(RequestCriteria::class));
+        $this->pushCriteria(app(SignaturesCriteria::class));
     }
 
     public function presenter()
